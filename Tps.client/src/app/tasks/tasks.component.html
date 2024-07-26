@@ -1,0 +1,47 @@
+<h1>Tasks</h1>
+<p>List of Tasks.</p>
+<p *ngIf="!tasks"><em>Loading...</em></p>
+<div class="commands text-right" *ngIf="tasks">
+  <button type="submit"
+          [routerLink]="['/projectTask']"
+          class="btn btn-success">
+    Add a new Task
+  </button>
+</div>
+<table class='table table-striped' aria-labelledby="tableLabel" [hidden]="!tasks">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Code</th>
+      <th>JobName</th>
+      <th>Service</th>
+      <th>VolumePages</th>
+      <th>Rate</th>
+      <th>Total</th>
+      <th>MarginPercent</th>
+      <th>StartDateTime</th>
+      <th>EndDateTime</th>
+      <th>Status</th>
+      <th>ProjectId</th>
+      <th>TranslatorId</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let task of tasks">
+      <td>{{ task.id }}</td>
+      <td>{{ task.code }}</td>
+      <td>{{ task.jobName }}</td>
+      <td>{{ task.service }}</td>
+      <td>{{ task.volumePages }}</td>
+      <td>{{ task.rate }}</td>
+      <td>{{ task.total }}</td>
+      <td>{{ task.marginPercent }}</td>
+      <td>{{ task.startDateTime }}</td>
+      <td>{{ task.endDateTime }}</td>
+      <td>{{ task.status }}</td>
+      <td>{{ task.projectId }}</td>
+      <td>{{ task.translatorId }}</td>
+      <a [routerLink]="['/projectTask', task.id]">{{task.jobName}}</a>
+    </tr>
+  </tbody>
+</table>

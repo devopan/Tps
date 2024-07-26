@@ -1,0 +1,125 @@
+<div class="task-edit">
+  <h1>{{title}}</h1>
+  <p *ngIf="!task"><em>Loading...</em></p>
+  <div class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="id">Task id:</label>
+      <br />
+      <input type="text" id="id"
+             formControlName="id" required
+             placeholder="Task id..."
+             class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="code">Task code:</label>
+      <br />
+      <input type="text" id="code"
+             formControlName="code" required
+             placeholder="code..."
+             class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="jobName">Task jobName:</label>
+      <br />
+      <input type="text" id="jobName"
+             formControlName="jobName" required
+             placeholder="JobName..."
+             class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="service">Task service:</label>
+      <br />
+      <input type="text" id="service"
+             formControlName="service" required
+             placeholder="Task service..."
+             class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="volumePages">Task volumePages:</label>
+      <br />
+      <input type="text" id="volumePages"
+             formControlName="volumePages" required
+             placeholder="Task volumePages..."
+             class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="rate">Task rate:</label>
+      <br />
+      <input type="text" id="rate"
+             formControlName="rate" required
+             placeholder="Task rate..."
+             class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="total">Task total:</label>
+      <br />
+      <input type="text" id="total"
+             formControlName="total" required
+             placeholder="Task total..."
+             class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="marginPercent">Task marginPercent:</label>
+      <br />
+      <input type="text" id="marginPercent"
+             formControlName="marginPercent" required
+             placeholder="Task marginPercent..."
+             class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="startDateTime">Task startDateTime:</label>
+      <br />
+      <input type="text" id="startDateTime"
+             formControlName="startDateTime" required
+             placeholder="Task startDateTime..."
+             class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="endDateTime">Task endDateTime:</label>
+      <br />
+      <input type="text" id="endDateTime"
+             formControlName="endDateTime" required
+             placeholder="Task endDateTime..."
+             class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="status">Task status:</label>
+      <br />
+      <input type="text" id="status"
+             formControlName="status" required
+             placeholder="Task status..."
+             class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="projectId">Task projectId:</label>
+      <br />
+      <input type="text" id="projectId"
+             formControlName="projectId" required
+             placeholder="Task projectId..."
+             class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="translatorId">Task translatorId:</label>
+      <br />
+      <input type="text" id="translatorId"
+             formControlName="translatorId" required
+             placeholder="Task translatorId..."
+             class="form-control" />
+    </div>
+    <div class="form-group commands">
+      <button type="submit"
+              (click)="onSubmit()"
+              class="btn btn-success">
+        Save
+      </button>
+      <button type="submit"
+              [routerLink]="['/projectTasks']"
+              class="btn">
+        Cancel
+      </button>
+    </div>
+  </div>
+</div>
+
+
+

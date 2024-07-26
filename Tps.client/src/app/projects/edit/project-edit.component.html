@@ -1,0 +1,85 @@
+<div class="project-edit">
+  <h1>{{title}}</h1>
+  <p *ngIf="!project"><em>Loading...</em></p>
+  <div class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="id">Project id:</label>
+      <br />
+      <input type="text" id="id"
+             formControlName="id" required
+             placeholder="Project id..."
+             class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="code">Project code:</label>
+      <br />
+      <input type="text" id="code"
+             formControlName="code" required
+             placeholder="code..."
+             class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="name">Project name:</label>
+      <br />
+      <input type="text" id="name"
+             formControlName="name" required
+             placeholder="name..."
+             class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="client">Project client:</label>
+      <br />
+      <input type="text" id="client"
+             formControlName="client" required
+             placeholder="Project client..."
+             class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="revenue">Project revenue:</label>
+      <br />
+      <input type="text" id="revenue"
+             formControlName="revenue" required
+             placeholder="Project revenue..."
+             class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="startDateTime">Project startDateTime:</label>
+      <br />
+      <input type="text" id="startDateTime"
+             formControlName="startDateTime" required
+             placeholder="Project startDateTime..."
+             class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="endDateTime">Project endDateTime:</label>
+      <br />
+      <input type="text" id="endDateTime"
+             formControlName="endDateTime" required
+             placeholder="Project endDateTime..."
+             class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="status">Project status:</label>
+      <br />
+      <input type="text" id="status"
+             formControlName="status" required
+             placeholder="Project status..."
+             class="form-control" />
+    </div>
+    <div class="form-group commands">
+      <button type="submit"
+              (click)="onSubmit()"
+              class="btn btn-success">
+        Save
+      </button>
+      <button type="submit"
+              [routerLink]="['/']"
+              class="btn">
+        Cancel
+      </button>
+    </div>
+  </div>
+</div>
+
+
+

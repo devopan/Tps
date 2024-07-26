@@ -1,0 +1,6 @@
+@Tps.Server_HostAddress = http://localhost:5062
+
+GET {{Tps.Server_HostAddress}}/projects/
+Accept: application/json
+
+###
